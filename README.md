@@ -12,7 +12,7 @@ spring-boot-demo
   @Value("${minMoney}")
   private BigDecimal minMoney
 5. controller的注解： @RestController
-6. get请求方法的注解：@GetMapping("/hello") 这是曾经的@RequestMapping()注解的简写方式
+6. get请求方法的注解(post请求方法的注解@PostMapping)：@GetMapping("/hello") 这是曾经的@RequestMapping()注解的简写方式
   localhost:8081/luckymoney/hello
 
 请求路径说明：
@@ -21,5 +21,13 @@ server:
   port: 8081 // 这是暴露的端口
   servlet:
     context-path: /luckymoney // localhost:8081/luckymoney
+
+7. @Controller
+8. @ResponseBody
+9. @RestController 就是之前的@Controller + @ResponseBody 才能返回json
+10. @RequestMapping：旧版本spring-boot注解。虽然部分可以用GetMapping代替，但是某些特殊的情况还是需要用到这个
+ 如果是
+11. 获取url中的数据：@PathVariable
+12. 获取请求参数的值：@RequestParam
 
 ```

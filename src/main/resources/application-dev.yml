@@ -7,3 +7,13 @@ limit:
   minMoney: 0.21
   maxMoney: 999
   description: 最少发${limit.minMoney}元, 最多发${limit.maxMoney}
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/eggdb-ut
+    username: postgres
+    password: postgres
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update

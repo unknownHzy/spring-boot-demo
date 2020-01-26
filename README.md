@@ -1,6 +1,5 @@
 # spring-boot-demo
-spring-boot-demo
-
+ [x] 增删改查
 ```
 注解：
 1. 整个spring boot程序的入口: @SpringBootApplication

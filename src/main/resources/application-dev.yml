@@ -10,10 +10,18 @@ limit:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/eggdb-ut
+    url: jdbc:postgresql://localhost:5432/spring-boot
     username: postgres
     password: postgres
   jpa:
-    show-sql: true
+    show-sql: true #显示执行sql
     hibernate:
       ddl-auto: update
+    properties:
+      hibernate:
+        generate_statistics: true # 生成hibernate对db操作的执行统计
+        jdbc:
+          batch_size: 2 #批量操作条数
+          batch_versioned_date: true #
+        order_inserts: true #执行批量插入操作的时候按照实体类进行分组
+        order_updates: true #

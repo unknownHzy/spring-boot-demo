@@ -9,6 +9,8 @@ limit:
   description: 最少发${limit.minMoney}元, 最多发${limit.maxMoney}
 
 spring:
+  main:
+    lazy-initialization: true
   datasource:
     url: jdbc:postgresql://localhost:5432/spring-boot
     username: postgres

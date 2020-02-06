@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 /**
- * 多对多
+ * 多对多: 使用ManyToMany不会产生中间表
  */
 @Entity
 @Table(name = "hobby")

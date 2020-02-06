@@ -23,11 +23,15 @@
     AUTO：主键由程序控制。 
  ```
 -[ ] Persistence Context:
--[x] 懒加载：https://www.baeldung.com/java-jpa-lazy-collections   
+-[ ] 懒加载：https://www.baeldung.com/java-jpa-lazy-collections   
 懒加载帮助我们避免加载不必要的数据，有时候我们在closed Persistence Context读取没有初始化的数据
+按照连接上的提示，懒加载操作没有成功，没有任何报错出来。
 ```
 默认情况下：JPA使用的懒加载策略的注解是@ElementCollection
 ```
+
+-[ ] 单元测试：https://www.baeldung.com/spring-boot-testing
+
  
  解决的问题：   
  1）开启hibernate.generate_statistics：
@@ -112,4 +116,14 @@ server:
 11. 获取url中的数据：@PathVariable
 12. 获取请求参数的值：@RequestParam
 
+```
+
+3) basic attribute type should not be a container
+```
+// 以下作为属性使用的时候会报错，
+private List<String> phones;
+
+// 改成这样即可 需要有ElementCollection注解
+@ElementCollection
+private List<String> phones;
 ```
